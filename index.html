@@ -3,652 +3,197 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PRAXAK — High-Retention Short-Form Video Studio</title>
+<title>PRAXAK · High-Retention Short-Form Video Studio</title>
 <meta name="description" content="PRAXAK turns raw footage and podcasts into high-retention Reels, Shorts and TikToks, plus carousels and thumbnails. 48-hour turnaround from India for clients worldwide.">
 <link rel="canonical" href="https://akashaychandranu-cell.github.io/AK/">
-<meta name="theme-color" content="#0B0D11">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0d11" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PRAXAK">
-<meta property="og:title" content="PRAXAK — High-Retention Short-Form Video Studio">
+<meta property="og:title" content="PRAXAK · High-Retention Short-Form Video Studio">
 <meta property="og:description" content="PRAXAK turns raw footage and podcasts into high-retention Reels, Shorts and TikToks, plus carousels and thumbnails. 48-hour turnaround from India for clients worldwide.">
 <meta property="og:url" content="https://akashaychandranu-cell.github.io/AK/">
 <meta property="og:image" content="https://akashaychandranu-cell.github.io/AK/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PRAXAK — High-Retention Short-Form Video Studio">
+<meta name="twitter:title" content="PRAXAK · High-Retention Short-Form Video Studio">
 <meta name="twitter:description" content="PRAXAK turns raw footage and podcasts into high-retention Reels, Shorts and TikToks, plus carousels and thumbnails. 48-hour turnaround from India for clients worldwide.">
 <meta name="twitter:image" content="https://akashaychandranu-cell.github.io/AK/og.jpg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "PRAXAK", "url": "https://akashaychandranu-cell.github.io/AK/", "description": "PRAXAK turns raw footage and podcasts into high-retention Reels, Shorts and TikToks, plus carousels and thumbnails. 48-hour turnaround from India for clients worldwide.", "email": "hello@praxak.com", "image": "https://akashaychandranu-cell.github.io/AK/og.jpg", "logo": "https://akashaychandranu-cell.github.io/AK/favicon.svg", "areaServed": ["IN", "US", "GB", "AE", "AU"], "address": {"@type": "PostalAddress", "addressCountry": "IN"}, "sameAs": []}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-
-<style>
-/* Layout concept: one dark editorial canvas — oversized kinetic type, a pinned
-   horizontal "edit timeline", and work cards whose covers animate like the edits they sell. */
-:root{
-  --bg:#0B0D11; --surface:#121620; --surface-2:#171C28;
-  --ink:#F3F6FA; --muted:#8C99AD; --line:rgba(140,160,190,.16);
-  --cyan:#00F0FF; --royal:#2563EB; --warn:#FF4D6D;
-  --display:'Syne',ui-sans-serif,system-ui,sans-serif;
-  --body:'Inter',ui-sans-serif,system-ui,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;
-  --gut:max(18px,env(safe-area-inset-left,0px));
-  --gut-r:max(18px,env(safe-area-inset-right,0px));
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:rgba(11,13,17,.92)}
-/* grain + ambient field */
-body::after{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
-}
-#field{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(50% 40% at var(--mx,30%) var(--my,12%),rgba(0,240,255,.13),transparent 68%),
-    radial-gradient(45% 45% at 88% 28%,rgba(37,99,235,.20),transparent 70%),
-    radial-gradient(60% 40% at 10% 88%,rgba(37,99,235,.12),transparent 70%);
-  transition:background-position .4s ease}
-.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-left:var(--gut);padding-right:var(--gut-r)}
-section{position:relative;z-index:1}
-h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em;line-height:.95}
-p{margin:0}
-a{color:inherit}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan)}
-.lede{color:var(--muted);max-width:62ch}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
-
-/* ---------- header ---------- */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
-  background:rgba(11,13,17,.72);backdrop-filter:blur(14px) saturate(140%);
-  border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;letter-spacing:.06em;font-size:18px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
-nav.links{display:none;gap:26px;font-size:13px;color:var(--muted)}
-nav.links a{text-decoration:none;position:relative;padding-block:4px}
-nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--cyan);transition:right .3s ease}
-nav.links a:hover{color:var(--ink)}nav.links a:hover::after{right:0}
-@media(min-width:900px){nav.links{display:flex}}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:600;
-  text-decoration:none;cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--ink);
-  transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease;min-height:44px}
-.btn:hover{transform:translateY(-2px);border-color:var(--cyan)}
-.btn-fill{background:linear-gradient(110deg,var(--cyan),var(--royal));color:#05070B;border-color:transparent}
-.btn-fill:hover{box-shadow:0 10px 36px -10px rgba(0,240,255,.6)}
-
-/* ---------- hero ---------- */
-.hero{padding-block:clamp(48px,9vw,104px) clamp(36px,6vw,64px)}
-.hero h1{font-size:calc((min(100vw, 1240px) - 44px) / 10.6);font-weight:800;text-transform:uppercase;line-height:.84}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--cyan),var(--royal) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-top{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between;margin-bottom:22px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:28px;margin-top:40px;align-items:end}
-@media(min-width:820px){.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px)}}
-.stats{display:flex;flex-wrap:wrap;gap:12px}
-.stat{flex:1 1 150px;min-width:0;border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent)}
-.stat b{display:block;font-family:var(--display);font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
-.stat>span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-
-/* phone mock */
-.phone{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:28px;border:1px solid var(--line);
-  background:var(--surface);overflow:hidden;box-shadow:0 40px 90px -50px rgba(0,240,255,.5)}
-.phone .layerA,.phone .layerB{position:absolute;inset:0}
-.phone .layerA{background:linear-gradient(180deg,#2A2E36,#191C22)}
-.phone .layerB{background:radial-gradient(70% 55% at 50% 32%,#1E4FD1,#0C1A3D 58%,#070B16)}
-.bust{position:absolute;left:50%;translate:-50% 0;border-radius:50%}
-.head{top:26%;width:26%;aspect-ratio:1}
-.torso{top:44%;width:42%;height:46%;border-radius:46% 46% 0 0}
-.cap{position:absolute;left:10px;right:10px;bottom:16%;text-align:center;font-family:var(--display);font-weight:800;
-  font-size:clamp(15px,3.6vw,21px);line-height:1.15;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.9)}
-.cap i{font-style:normal;display:inline-block;margin:0 .16em}
-.hook{position:absolute;top:7%;left:8%;right:8%;text-align:center}
-.hook span{display:inline-block;background:#fff;color:#0B0D11;font-family:var(--display);font-weight:800;font-size:12.5px;
-  padding:6px 10px;border-radius:5px;rotate:-2deg}
-.scrub{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,255,255,.14)}
-.scrub i{display:block;height:100%;width:38%;background:var(--cyan)}
-.tagline{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:10px;color:var(--muted)}
-.swap{position:absolute;right:12px;bottom:10px;font-family:var(--mono);font-size:10px;color:var(--cyan)}
-
-/* ---------- marquee ---------- */
-.ticker{border-block:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.02);margin-block:clamp(40px,7vw,80px)}
-.ticker-row{display:flex;gap:40px;width:max-content;padding-block:14px;will-change:transform}
-.ticker-row span{font-family:var(--display);font-weight:700;font-size:clamp(14px,2.4vw,20px);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);display:flex;align-items:center;gap:40px}
-.ticker-row span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan)}
-
-/* ---------- section heads ---------- */
-.shead{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:26px}
-.shead h2{font-size:clamp(2rem,5.4vw,3.6rem);font-weight:800;text-transform:uppercase}
-
-/* ---------- filters + work grid ---------- */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.chip{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;padding:9px 14px;min-height:40px;
-  border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;
-  transition:color .2s,border-color .2s,background .2s;display:inline-flex;align-items:center;gap:6px}
-.chip:hover{color:var(--ink);border-color:var(--cyan)}
-.chip[aria-pressed="true"]{background:linear-gradient(110deg,var(--cyan),var(--royal));color:#05070B;border-color:transparent}
-.grid{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:1040px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.card{position:relative;text-align:left;min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;
-  background:var(--surface);cursor:pointer;color:inherit;padding:0;font:inherit;
-  transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-.card:hover{transform:translateY(-6px);border-color:rgba(0,240,255,.45);box-shadow:0 26px 60px -30px rgba(0,240,255,.5)}
-.cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0E1218}
-.cover .mesh{position:absolute;inset:0;opacity:.95}
-.cover video,.cover img.pst{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.cover .tag{top:auto;bottom:12px}
-.live{position:absolute;bottom:12px;right:12px;display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;
-  letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:rgba(11,13,17,.8);border:1px solid var(--line);opacity:0;transition:opacity .3s}
-.live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--warn)}
-.cover.playing .live{opacity:1}
-.player{width:100%;aspect-ratio:4/3;max-width:100%;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}
-.player video{width:100%;height:100%;object-fit:cover;display:block}
-.cover .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 4px);mix-blend-mode:overlay}
-.bars{position:absolute;left:14px;right:14px;bottom:14px;display:flex;align-items:flex-end;gap:3px;height:30%}
-.bars i{flex:1;background:rgba(255,255,255,.28);border-radius:1px;transform-origin:bottom}
-.kin{position:absolute;inset:auto 14px 42%;font-family:var(--display);font-weight:800;text-transform:uppercase;
-  font-size:clamp(15px,2.6vw,21px);line-height:1.05;text-shadow:0 2px 10px rgba(0,0,0,.8)}
-.kin u{text-decoration:none;color:var(--cyan)}
-.tag{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  padding:5px 9px;border-radius:999px;background:rgba(11,13,17,.8);border:1px solid var(--line)}
-.play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(11,13,17,0);transition:background .3s}
-.card:hover .play{background:rgba(11,13,17,.42)}
-.play i{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(110deg,var(--cyan),var(--royal));
-  opacity:0;scale:.8;transition:opacity .3s,scale .3s}
-.card:hover .play i{opacity:1;scale:1}
-.cbody{padding:18px 18px 20px;display:grid;gap:7px}
-.cbody .niche{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase}
-.cbody h3{font-size:19px;font-weight:700;line-height:1.15}
-.cbody p{font-size:13.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.more{font-size:13px;font-weight:600;color:var(--ink);display:inline-flex;gap:7px;align-items:center;margin-top:4px}
-.card:hover .more{color:var(--cyan)}
-
-/* ---------- pinned edit timeline ---------- */
-.rail{overflow:hidden}
-.track{display:flex;gap:18px;width:max-content;padding-block:8px}
-.panel{width:min(78vw,420px);min-width:0;border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--surface-2);
-  display:grid;gap:12px;align-content:start}
-.panel .tc{font-family:var(--mono);font-size:12px;color:var(--cyan);letter-spacing:.1em}
-.panel h3{font-size:22px;font-weight:700;text-transform:uppercase}
-.panel p{font-size:14px;color:var(--muted)}
-.panel .wave{display:flex;gap:2px;align-items:flex-end;height:38px;margin-top:4px}
-.panel .wave i{flex:1;background:linear-gradient(180deg,var(--cyan),var(--royal));border-radius:1px;opacity:.75}
-
-/* ---------- bento ---------- */
-.bento{display:grid;grid-template-columns:1fr;gap:14px}
-@media(min-width:760px){.bento{grid-template-columns:repeat(6,minmax(0,1fr))}
- .b1{grid-column:span 4}.b2{grid-column:span 2}.b3{grid-column:span 2}.b4{grid-column:span 2}.b5{grid-column:span 2}}
-.cell{min-width:0;border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--surface);display:grid;gap:9px;align-content:start}
-.cell svg{width:22px;height:22px;stroke:var(--cyan);fill:none;stroke-width:1.6}
-.cell h3{font-size:17px;font-weight:700}
-.cell p{font-size:13.5px;color:var(--muted)}
-.cell ul{margin:4px 0 0;padding-left:16px;font-size:13px;color:var(--muted);display:grid;gap:4px}
-
-/* ---------- process ---------- */
-.steps{display:grid;gap:14px;grid-template-columns:1fr}
-@media(min-width:880px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.step{min-width:0;border:1px solid var(--line);border-radius:18px;padding:24px;background:linear-gradient(180deg,rgba(255,255,255,.035),transparent);display:grid;gap:10px;align-content:start}
-.step b{font-family:var(--display);font-size:46px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(0,240,255,.55)}
-.step h3{font-size:19px;font-weight:700}
-.step p{font-size:13.5px;color:var(--muted)}
-.step .when{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase}
-
-/* ---------- cta ---------- */
-.cta{border:1px solid rgba(0,240,255,.3);border-radius:26px;padding:clamp(28px,6vw,64px);text-align:center;
-  background:radial-gradient(60% 110% at 10% 0%,rgba(0,240,255,.16),transparent 62%),radial-gradient(60% 110% at 100% 100%,rgba(37,99,235,.3),transparent 62%),var(--surface)}
-.cta h2{font-size:clamp(2rem,6vw,4rem);font-weight:800;text-transform:uppercase}
-.cta .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
-.terms{font-size:12px;color:var(--muted);max-width:64ch;margin:22px auto 0}
-
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);margin-top:clamp(48px,8vw,96px)}
-.fgrid{display:grid;gap:26px;grid-template-columns:1fr;padding-block:40px}
-@media(min-width:760px){.fgrid{grid-template-columns:2fr 1fr 1fr}}
-.fgrid h4{font-size:12px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.fgrid ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;font-size:14px}
-.copy{border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;padding-block:18px}
-
-/* ---------- dialog ---------- */
-dialog{border:none;padding:0;background:transparent;max-width:min(920px,94vw);width:100%}
-dialog::backdrop{background:rgba(5,7,11,.82);backdrop-filter:blur(6px)}
-.sheet{border:1px solid var(--line);border-radius:22px;background:var(--surface);overflow:hidden;
-  display:grid;grid-template-columns:1fr;max-height:88vh;overflow-y:auto}
-@media(min-width:800px){.sheet{grid-template-columns:1fr 1fr}}
-.sheet .vis{background:#0A0D12;padding:24px;display:grid;place-items:center;min-width:0}
-.sheet .vis .phone{width:min(260px,100%)}
-.sheet .info{padding:26px;display:grid;gap:16px;align-content:start;min-width:0}
-.sheet h3{font-size:clamp(20px,3.4vw,28px);font-weight:800;text-transform:uppercase}
-.bullet{display:flex;gap:12px}
-.bullet .ic{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center}
-.bullet svg{width:15px;height:15px;stroke-width:1.8;fill:none}
-.bullet p{font-size:13.5px;color:var(--muted);margin-top:3px}
-.bullet strong{font-size:13px;font-weight:600;color:var(--ink)}
-.close{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
-  background:rgba(11,13,17,.9);color:var(--ink);cursor:pointer;display:grid;place-items:center}
-.sheet-wrap{position:relative}
-
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-.fgrid a{text-decoration:none}.fgrid a:hover{color:var(--cyan)}
-html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<div id="field" aria-hidden="true"></div>
-
-<header>
-  <div class="wrap bar">
-    <a class="brand" href="#top">
-      <svg width="26" height="26" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <defs><linearGradient id="g1" x1="0" y1="40" x2="40" y2="0"><stop stop-color="#2563EB"/><stop offset="1" stop-color="#00F0FF"/></linearGradient></defs>
-        <path d="M8 6 32 20 8 34Z" stroke="url(#g1)" stroke-width="3" stroke-linejoin="round"/>
-        <path d="M13 26 19 20l3 3 6-8" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      PRAXAK <span class="dot" aria-hidden="true"></span>
-    </a>
-    <nav class="links" aria-label="Sections">
-      <a href="#work">Work</a><a href="#anatomy">Anatomy</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a>
-    </nav>
-    <a class="btn btn-fill" href="#contact">Claim a free trial edit</a>
+<body data-page="home">
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="index.html"><i aria-hidden="true"></i>PRAXAK</a>
+    <div class="links">
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="plans.html">Plans</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn small" href="contact.html">Free trial edit</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="wrap">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="plans.html">Plans</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+<main class="view">
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="label">Short-form studio · India → worldwide · IST overnight pipeline</span>
+      <h1>Raw footage into <span class="s">retention.</span></h1>
+      <p class="lede">We cut podcasts, Zoom recordings and phone footage into short-form video that holds attention past the three-second drop-off, then wrap it in the carousels, thumbnails and calendar that make it a system.</p>
+      <div class="ctas">
+        <a class="btn" href="contact.html">Send one link, get a sample cut</a>
+        <a class="btn ghost" href="work.html">See the work</a>
+      </div>
+    </div>
+    <div class="frames media-hero" aria-label="Recent cuts">
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w1.jpg" src="media/w1.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Reel · 9:16</span></div><div class="bar"><span></span></div></div>
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w2.jpg" src="media/w2.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Motion · 9:16</span></div><div class="bar"><span></span></div></div>
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w5.jpg" src="media/w5.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Split screen · 9:16</span></div><div class="bar"><span></span></div></div>
+    </div>
   </div>
 </header>
 
-<main id="top">
-<section class="hero wrap">
-  <div class="hero-top">
-    <p class="eyebrow">Short-form studio · India → worldwide</p>
-    <p class="eyebrow" style="color:var(--muted)">IST overnight pipeline · 48h</p>
-  </div>
-
-  <h1 id="heroHead">
-    <span class="ln"><span class="w">Raw</span></span>
-    <span class="ln"><span class="w">Into</span></span>
-    <span class="ln"><span class="w"><em>Retention</em></span></span>
-  </h1>
-
-  <div class="hero-grid">
-    <div>
-      <p class="lede" style="margin-top:26px;font-size:17px">
-        We cut podcasts, Zoom recordings and phone footage into short-form video that holds attention past
-        the three-second drop-off — then wrap it in the carousels, thumbnails and calendar that make it a system.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-fill" href="#contact">Send one link, get a sample cut</a>
-        <a class="btn" href="#work">See the work
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
-        </a>
-      </div>
-      <div class="stats" style="margin-top:34px">
-        <div class="stat"><b><span class="count" data-to="48">48</span>H</b><span>Turnaround per batch</span></div>
-        <div class="stat"><b><span class="count" data-to="20">20</span>+</b><span>Videos per month</span></div>
-        <div class="stat"><b><span class="count" data-to="2">2</span></b><span>Revision rounds max</span></div>
-        <div class="stat"><b><span class="count" data-to="0">0</span></b><span>Lock-in contracts</span></div>
-      </div>
-    </div>
-
-    <div class="phone" id="heroPhone" aria-hidden="true">
-      <div class="layerA"><div class="bust head" style="background:#55585E"></div><div class="bust torso" style="background:#4A4D52"></div></div>
-      <div class="layerB" id="heroEdit">
-        <div class="bust head" style="background:#E8B08C"></div><div class="bust torso" style="background:#111827"></div>
-        <div class="scrub"><i id="heroScrub"></i></div>
-        <div class="hook"><span>Stop opening with "hi guys"</span></div>
-        <div class="cap"><i class="kw">Your</i><i class="kw">first</i><i class="kw">two</i><i class="kw">seconds</i></div>
-      </div>
-      <span class="tagline">RAW 00:47:12</span><span class="swap">PRAXAK CUT 00:38</span>
-    </div>
-  </div>
-</section>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-row" id="tick1">
-    <span>Hook rewrites</span><span>Kinetic captions</span><span>Punch-in zooms</span><span>Contextual B-roll</span><span>Authority carousels</span><span>Thumbnail systems</span>
-    <span>Hook rewrites</span><span>Kinetic captions</span><span>Punch-in zooms</span><span>Contextual B-roll</span><span>Authority carousels</span><span>Thumbnail systems</span>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>48h</b><span class="label">Turnaround per batch</span></div>
+    <div class="stat"><b>20+</b><span class="label">Videos per month</span></div>
+    <div class="stat"><b>2</b><span class="label">Revision rounds max</span></div>
+    <div class="stat"><b>0</b><span class="label">Lock-in contracts</span></div>
   </div>
 </div>
 
-<section class="wrap" id="work">
-  <div class="shead">
-    <div>
-      <p class="eyebrow">Spec work</p>
-      <h2>Open any cut.<br>See what changed.</h2>
-    </div>
-    <p class="lede" style="font-size:14px">Each piece lists the footage problem, the edit decision, and the retention techniques used — no view-count screenshots.</p>
+<div class="ruler">
+  <div class="wrap">
+    <span class="label">Cut for</span>
+    <div class="ticks" aria-hidden="true"></div>
+    <div class="platforms"><span>Instagram Reels</span><span>YouTube Shorts</span><span>TikTok</span><span>LinkedIn</span></div>
   </div>
+</div>
 
-  <div class="chips" role="group" aria-label="Filter work"></div>
-  <div class="grid" id="grid"></div>
-</section>
-
-<section id="anatomy" style="margin-top:clamp(56px,9vw,110px)">
-  <div class="wrap shead">
-    <div>
-      <p class="eyebrow">Anatomy of a 38-second cut</p>
-      <h2>Scrub the timeline</h2>
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">What we ship</span>
+      <h2>Video first, then the <span class="s">system</span> around it</h2>
     </div>
-    <p class="lede" style="font-size:14px">The same six moves run through every deliverable. Scroll sideways through them.</p>
-  </div>
-  <div class="rail" id="rail">
-    <div class="wrap"><div class="track" id="track"></div></div>
-  </div>
-</section>
-
-<section class="wrap" id="capabilities" style="margin-top:clamp(56px,9vw,110px)">
-  <div class="shead">
-    <div><p class="eyebrow">Capabilities</p><h2>What we actually ship</h2></div>
-  </div>
-  <div class="bento">
-    <div class="cell b1">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m10 9 5 3-5 3z"/></svg>
-      <h3>Short-form video editing</h3>
-      <p>Reels, Shorts, TikToks and podcast clips cut for retention, not for decoration.</p>
-      <ul><li>Hook rewrite and cold-open reorder</li><li>Word-by-word kinetic captions</li><li>Motion-graphic framework builds in After Effects</li><li>Colour grade, cleaned audio, platform-ready exports</li></ul>
-    </div>
-    <div class="cell b2">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h12v16H4z"/><path d="M18 7h2v10h-2"/></svg>
-      <h3>Authority carousels</h3>
-      <p>7–8 slide swipe-throughs for LinkedIn and Instagram: one idea per slide, save trigger on the last.</p>
-    </div>
-    <div class="cell b3">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
-      <h3>Thumbnail systems</h3>
-      <p>Repeatable face-crop, three-word headline and A/B variant pairs instead of frame grabs.</p>
-    </div>
-    <div class="cell b4">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V8M10 18V5M16 18v-7M22 18H2"/></svg>
-      <h3>Monthly reporting</h3>
-      <p>Retention curves, watch-through and hook comparisons — what to cut more of next month.</p>
-    </div>
-    <div class="cell b5">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4H8z"/><path d="M5 8h14v12H5z"/><path d="M9 13h6"/></svg>
-      <h3>Content calendar</h3>
-      <p>Batch-record once, post for weeks. Hook scripting and profile optimisation included on Growth up.</p>
+    <div class="services">
+      <div class="svc"><h3>Short-form editing</h3><p>Reels, Shorts, TikToks and podcast clips cut for retention, not for decoration.</p><ul class="dash"><li>Hook rewrite and cold-open reorder</li><li>Word-by-word kinetic captions</li><li>Colour grade, cleaned audio, platform-ready exports</li></ul><a class="textlink" href="services.html">Editing details →</a></div>
+      <div class="svc"><h3>Carousels and thumbnails</h3><p>Swipe-throughs and thumbnail systems that make each idea work on every surface.</p><ul class="dash"><li>7–8 slide authority carousels</li><li>Face-crop, three-word thumbnail headlines</li><li>A/B variant pairs</li></ul><a class="textlink" href="services.html">Design details →</a></div>
+      <div class="svc"><h3>Reporting and calendar</h3><p>Batch-record once, post for weeks, and know what to cut more of next month.</p><ul class="dash"><li>Retention curves and watch-through</li><li>Hook comparisons</li><li>Monthly content calendar</li></ul><a class="textlink" href="services.html">System details →</a></div>
     </div>
   </div>
 </section>
 
-<section class="wrap" id="process" style="margin-top:clamp(56px,9vw,110px)">
-  <div class="shead">
-    <div><p class="eyebrow">Process</p><h2>Three steps. Zero editing on your side.</h2></div>
-  </div>
-  <div class="steps">
-    <div class="step"><b>01</b><p class="when">Day 0 · your evening</p><h3>Drop the raw files</h3><p>Footage, podcast exports or links go into a private shared Drive folder. Our one-page filming guide keeps the batch usable.</p></div>
-    <div class="step"><b>02</b><p class="when">Overnight · IST</p><h3>Studio edit and QC</h3><p>Hook scripted, cut assembled, captions, B-roll, SFX and motion graphics added, then a frame-by-frame check before delivery.</p></div>
-    <div class="step"><b>03</b><p class="when">Within 48 hours</p><h3>Review and post</h3><p>Leave timestamped notes, use your revision round, approve. Then we lock a monthly cadence so the output compounds.</p></div>
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">Anatomy of a 38-second cut</span>
+      <h2>Stop opening with <span class="s">“hi guys”</span></h2>
+      <p>Your first two seconds decide whether anyone sees the rest. The same moves run through every deliverable.</p>
+    </div>
+    <div class="anatomy">
+      <div class="track" style="grid-template-columns: 5fr 21fr 8fr 4fr" role="img" aria-label="Timeline of a 38-second cut: hook 0 to 2 seconds, build 2 to 23 seconds, payoff 23 to 34 seconds, loop and call to action 34 to 38 seconds">
+        <div class="seg hook"><span class="mono">0:00</span><b>Hook</b></div>
+        <div class="seg build"><span class="mono">0:02</span><b>Build</b></div>
+        <div class="seg payoff"><span class="mono">0:23</span><b>Payoff</b></div>
+        <div class="seg loop"><span class="mono">0:34</span><b>Loop</b></div>
+      </div>
+      <div class="axis"><span>0s</span><span>10s</span><span>20s</span><span>30s</span><span>38s</span></div>
+      <div class="notes4">
+        <p><strong>Hook rewrite</strong>A two-second pattern interrupt or a cold open on the best frame.</p>
+        <p><strong>Kinetic captions</strong>Word-by-word captions with keyword colour pops.</p>
+        <p><strong>Punch-in zooms</strong>A visual change every three to four seconds.</p>
+        <p><strong>Contextual B-roll</strong>Show the thing being described, not just a face saying it.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="wrap" id="contact" style="margin-top:clamp(56px,9vw,110px)">
-  <div class="cta">
-    <p class="eyebrow">Risk-free start</p>
-    <h2 style="margin-top:12px">Judge us on your own footage</h2>
-    <p class="lede" style="margin:16px auto 0;text-align:center">Send one published video or podcast episode. We cut a ~40-second sample so you can see the edit before paying for anything.</p>
-    <div class="row">
-      <a class="btn btn-fill" href="mailto:hello@praxak.com?subject=Free%20trial%20edit%20request">Claim the free trial edit</a>
-      <a class="btn" href="mailto:hello@praxak.com?subject=Book%20a%2015-minute%20call">Book a 15-minute call</a>
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">Spec work</span>
+      <h2>Open any cut. See what <span class="s">changed.</span></h2>
+      <p>Each piece lists the footage problem, the edit decision and the retention techniques used. No view-count screenshots.</p>
     </div>
-    <p class="terms">Retainers run month to month, cancel with 30 days' notice. 50% upfront before work begins, balance on delivery. Deliverable counts and revision rounds are fixed per plan; ad spend, premium stock and third-party tools are billed separately. We don't promise views, followers or sales — we promise consistent, on-time, retention-first output.</p>
+    <div class="grid-work">
+      <button class="tile" type="button" data-cat="talk" data-n="0"><div class="frame media g2 "><img class="poster" src="media/w1.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Reel · 9:16</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>High-retention talking-head reel</b><span>B2B consultant / podcaster</span></div></button><button class="tile" type="button" data-cat="before" data-n="3"><div class="frame media g2 "><img class="poster" src="media/w4.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Before / after</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>Hook makeover</b><span>Real estate agent</span></div></button><button class="tile" type="button" data-cat="motion" data-n="1"><div class="frame media g2 "><img class="poster" src="media/w2.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Motion · 9:16</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>Visual framework animation</b><span>Business coach</span></div></button>
+    </div>
+    <a class="textlink" href="work.html">See all six pieces →</a>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head">
+      <span class="label">Process</span>
+      <h2>Three steps. Zero editing on <span class="s">your side.</span></h2>
+    </div>
+    <div class="steps three">
+  <div class="step"><h3>Drop the raw files</h3><p>Footage, podcast exports or links go into a private shared Drive folder. Our one-page filming guide keeps the batch usable.</p><span class="when">Day 0 · your evening</span></div>
+  <div class="step"><h3>Studio edit and QC</h3><p>Hook scripted, cut assembled, captions, B-roll, SFX and motion graphics added, then a frame-by-frame check before delivery.</p><span class="when">Overnight · IST</span></div>
+  <div class="step"><h3>Review and post</h3><p>Leave timestamped notes, use your revision round, approve. Then we lock a monthly cadence so the output compounds.</p><span class="when">Within 48 hours</span></div>
+</div>
   </div>
 </section>
 </main>
-
-<footer>
-  <div class="wrap fgrid">
-    <div>
-      <a class="brand" href="#top" style="text-decoration:none">PRAXAK <span class="dot" aria-hidden="true"></span></a>
-      <p class="lede" style="margin-top:12px;font-size:14px">Strategy into practical action. High-retention short-form video and content systems for coaches, founders, podcasters and service businesses.</p>
+<section class="close">
+  <div class="wrap">
+    <h2>Judge us on your <span class="s">own</span> footage.</h2>
+    <div class="close-side">
+      <p>Send one published video or podcast episode. We cut a ~40-second sample so you can see the edit before paying for anything.</p>
+      <div class="ctas"><a class="btn" href="contact.html">Claim the free trial edit</a><a class="btn ghost" href="mailto:hello@praxak.com?subject=Book%20a%2015-minute%20call">Book a 15-minute call</a></div>
     </div>
-    <div><h4>Contact</h4><ul><li><a href="mailto:hello@praxak.com">hello@praxak.com</a></li></ul></div>
-    <div></div>
   </div>
-  <div class="wrap copy"><p>© <span id="yr">2026</span> PRAXAK · All rights reserved.</p><p>Edited overnight in India for clients worldwide.</p></div>
+</section>
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg">
+    <div class="frame media" id="dlg-frame"><video id="dlg-video" muted loop playsinline controls preload="none"></video></div>
+    <div class="dlg-body">
+      <button class="x" type="button" id="dlg-close">Close</button>
+      <span class="pill" id="dlg-tag"></span>
+      <h2 id="dlg-title" style="font-size:2rem"></h2>
+      <dl>
+        <dt>Client type</dt><dd id="dlg-niche"></dd>
+        <dt>Problem</dt><dd id="dlg-problem"></dd>
+        <dt>Edit</dt><dd id="dlg-edit"></dd>
+        <dt>Techniques</dt><dd id="dlg-tech"></dd>
+      </dl>
+    </div>
+  </div>
+</dialog><footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="index.html" style="color:var(--ink)"><i aria-hidden="true"></i>PRAXAK</a>
+      <p class="muted" style="font-size:15px;max-width:36ch">Strategy into practical action. High-retention short-form video and content systems for coaches, founders, podcasters and service businesses.</p>
+    </div>
+    <div><span class="label">Studio</span><a href="work.html">Work</a><a href="services.html">Services</a><a href="plans.html">Plans</a><a href="about.html">About</a></div>
+    <div><span class="label">Contact</span><a href="mailto:hello@praxak.com?subject=Free%20trial%20edit%20request">hello@praxak.com</a><a href="contact.html">Free trial edit</a><a href="mailto:hello@praxak.com?subject=Book%20a%2015-minute%20call">Book a 15-minute call</a></div>
+  </div>
+  <div class="foot-base"><div class="wrap"><span>© 2026 PRAXAK · All rights reserved.</span><span>Edited overnight in India for clients worldwide.</span></div></div>
 </footer>
-
-<dialog id="dlg" aria-label="Case breakdown">
-  <div class="sheet-wrap">
-    <button class="close" id="dlgClose" aria-label="Close breakdown">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-    </button>
-    <div class="sheet" id="sheet"></div>
-  </div>
-</dialog>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-(function(){
-  "use strict";
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  /* ---------------- data ---------------- */
-  var FILTERS = [
-    {k:'all',   l:'All work'},
-    {k:'talk',  l:'Talking head & podcast'},
-    {k:'motion',l:'Motion graphics'},
-    {k:'before',l:'Hook makeovers'},
-    {k:'design',l:'Carousels & thumbnails'}
-  ];
-  var WORKS = [
-    {id:1,video:'media/w1.mp4',poster:'media/w1.jpg',cat:'talk',tag:'Reel · 9:16',title:'High-retention talking-head reel',niche:'B2B consultant / podcaster',
-     hook:'Stop opening with "hi guys"',cap:['Your','first','two','seconds'],hue:'cyan',
-     problem:'A 47-minute podcast with a strong insight buried inside a four-minute answer, flat lighting, no visual movement.',
-     edit:'Pulled the sharpest 38 seconds, rewrote the open as a two-second pattern interrupt, cut every breath and filler word.',
-     tech:'Word-by-word kinetic captions · punch-in zoom every 3–4s · keyword colour pops · riser into the payoff line.'},
-    {id:2,video:'media/w2.mp4',poster:'media/w2.jpg',cat:'motion',tag:'Motion · 9:16',title:'Visual framework animation',niche:'Business coach',
-     hook:'Step 2 is where it breaks',cap:['Build','it','on','screen'],hue:'royal',
-     problem:'A three-step framework explained only in speech. Viewers lose the thread by step two and drop.',
-     edit:'Built an After Effects framework graphic that draws itself step by step, locked to the voiceover beats.',
-     tech:'Kinetic typography · synced build-on animation · brand-colour highlight system · whoosh transitions.'},
-    {id:3,video:'media/w3.mp4',poster:'media/w3.jpg',cat:'design',tag:'Carousel · 8 slides',title:'Authority carousel',niche:'Founder · LinkedIn & Instagram',
-     hook:'3 mistakes killing your pipeline',cap:['One','idea','per','slide'],hue:'cyan',
-     problem:'Long text posts with good thinking and no visual hierarchy. People scroll past before the second line.',
-     edit:'Turned one podcast insight into an eight-slide swipe-through: curiosity hook on slide one, save trigger on slide eight.',
-     tech:'Open-loop cover headline · one idea per slide · progress markers · high-contrast brand typography.'},
-    {id:4,video:'media/w4.mp4',poster:'media/w4.jpg',cat:'before',tag:'Before / after',title:'Hook makeover',niche:'Real estate agent',
-     hook:'₹1.4Cr — look at the terrace',cap:['Cold','open','the','money','shot'],hue:'warn',
-     problem:'The tour opens with "hi guys, so today…" and most viewers leave before the house is on screen.',
-     edit:'Reordered the footage to cold-open on the best frame with a price hook on screen, then cut into the walkthrough.',
-     tech:'Cold-open reorder · first-frame text hook · speed-ramped B-roll · music drop synced to the reveal.'},
-    {id:5,video:'media/w5.mp4',poster:'media/w5.jpg',cat:'talk',tag:'Split screen · 9:16',title:'Educational split-screen breakdown',niche:'Fitness / hybrid coach',
-     hook:'Your knees are doing this',cap:['Show','the','cue','not','just','say'],hue:'royal',
-     problem:'The coach describes form cues to camera, but the viewer never sees what is being described.',
-     edit:'Split layout — coach on top, demonstration B-roll below with tracked callouts and arrows on the exact joint.',
-     tech:'Split-screen layout · J-cuts and L-cuts · tracked callout arrows · check/cross SFX on each rep.'},
-    {id:6,video:'media/w6.mp4',poster:'media/w6.jpg',cat:'design',tag:'Thumbnails · 16:9',title:'High-CTR thumbnail system',niche:'YouTube podcaster',
-     hook:'I quit my $200K job',cap:['Three','words','one','focal','point'],hue:'cyan',
-     problem:'Auto-generated frame grabs: busy backgrounds, low contrast, unreadable at phone size.',
-     edit:'Designed a repeatable system — expressive face cut-out, three-to-four word headline, single focal point.',
-     tech:'Emotion-first face crops · three-word curiosity text · rim-light contrast · A/B variant pairs.'}
-  ];
-  var HUE = {cyan:['#00F0FF','#0A3A5E'],royal:['#2563EB','#0C1A3D'],warn:['#FF4D6D','#3A0F1C']};
-  var STEPS = [
-    {tc:'00:00–00:02',t:'Hook',d:'The first frame carries a claim or a number. No greeting, no name, no "so today".'},
-    {tc:'00:02–00:06',t:'Promise',d:'One line that tells the viewer what they get for staying. Captions start here, never later.'},
-    {tc:'00:06–00:18',t:'Proof',d:'B-roll, screen recordings or a built graphic behind every claim. Movement every three to four seconds.'},
-    {tc:'00:18–00:28',t:'Turn',d:'The counter-intuitive beat. Punch-in zoom, keyword pop, a riser under the delivery.'},
-    {tc:'00:28–00:34',t:'Payoff',d:'The takeaway in the speaker\'s own words, cleaned of hedging and restated on screen.'},
-    {tc:'00:34–00:38',t:'Ask',d:'One action, matched to the platform — save, follow, or the link. Never three at once.'}
-  ];
-
-  /* ---------------- render work grid ---------------- */
-  var chips = document.querySelector('.chips'), grid = document.getElementById('grid'), active = 'all';
-  function count(k){ return k === 'all' ? WORKS.length : WORKS.filter(function(w){return w.cat===k}).length }
-
-  FILTERS.forEach(function(f){
-    var b = document.createElement('button');
-    b.className = 'chip'; b.type = 'button';
-    b.setAttribute('aria-pressed', f.k === 'all');
-    b.textContent = f.l + ' (' + count(f.k) + ')';
-    b.addEventListener('click', function(){
-      active = f.k;
-      chips.querySelectorAll('.chip').forEach(function(c,i){ c.setAttribute('aria-pressed', FILTERS[i].k === active) });
-      draw();
-    });
-    chips.appendChild(b);
-  });
-
-  function cover(w){
-    if (w.video) {
-      return '<div class="cover">'+
-        '<img class="pst" src="'+w.poster+'" alt="" loading="lazy" decoding="async">'+
-        '<video muted loop playsinline preload="none" poster="'+w.poster+'" data-src="'+w.video+'" aria-hidden="true" tabindex="-1"></video>'+
-        '<span class="tag">'+w.tag+'</span><span class="live">Playing</span>'+
-        '<div class="play"><i><svg width="16" height="16" viewBox="0 0 20 20" fill="#05070B" aria-hidden="true"><path d="M5 3l12 7-12 7z"/></svg></i></div>'+
-      '</div>';
-    }
-    var h = HUE[w.hue], bars = '';
-    for (var i=0;i<26;i++) bars += '<i style="height:'+(22+(i*13)%70)+'%"></i>';
-    return '<div class="cover">'+
-      '<div class="mesh" style="background:radial-gradient(70% 55% at 50% 28%,'+h[0]+'33,transparent 70%),linear-gradient(170deg,'+h[1]+',#0A0D12)"></div>'+
-      '<div class="scan"></div>'+
-      '<div class="kin">'+w.cap.map(function(c,i){return i===1?'<u>'+c+'</u>':c}).join(' ')+'</div>'+
-      '<div class="bars">'+bars+'</div>'+
-      '<span class="tag">'+w.tag+'</span>'+
-      '<div class="play"><i><svg width="16" height="16" viewBox="0 0 20 20" fill="#05070B" aria-hidden="true"><path d="M5 3l12 7-12 7z"/></svg></i></div>'+
-    '</div>';
-  }
-
-  function draw(){
-    var list = active === 'all' ? WORKS : WORKS.filter(function(w){ return w.cat === active });
-    grid.innerHTML = '';
-    list.forEach(function(w){
-      var b = document.createElement('button');
-      b.className = 'card'; b.type = 'button';
-      b.innerHTML = cover(w) +
-        '<div class="cbody"><p class="niche">'+w.niche+'</p><h3>'+w.title+'</h3><p>'+w.problem+'</p>'+
-        '<span class="more">Open breakdown <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span></div>';
-      b.addEventListener('click', function(){ open(w) });
-      grid.appendChild(b);
-      var v = b.querySelector('video');
-      if (v) watch(v);
-    });
-    if (!reduce && window.gsap) gsap.from(grid.children, {opacity:0, y:16, duration:.4, stagger:.05, ease:'power2.out'});
-  }
-  /* ---------------- video covers: lazy-load, play only while on screen ---------------- */
-  function load(v){ if (!v.src && v.dataset.src) { v.src = v.dataset.src; } }
-  function start(v){
-    if (reduce) return;
-    load(v);
-    var p = v.play();
-    if (p && p.then) p.then(function(){ v.parentNode.classList.add('playing') }).catch(function(){});
-  }
-  function stop(v){ v.pause(); v.parentNode.classList.remove('playing') }
-  var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
-    es.forEach(function(e){ e.isIntersecting && e.intersectionRatio >= .55 ? start(e.target) : stop(e.target) });
-  }, {threshold:[0,.55]}) : null;
-  function watch(v){
-    v.addEventListener('playing', function(){ var img = v.parentNode.querySelector('.pst'); if (img) img.hidden = true; }, {once:true});
-    if (io) io.observe(v); else start(v);
-    var card = v.closest('.card');
-    card.addEventListener('pointerenter', function(){ start(v) });
-    card.addEventListener('focus', function(){ start(v) });
-  }
-  document.addEventListener('visibilitychange', function(){
-    if (document.hidden) document.querySelectorAll('.cover video').forEach(stop);
-  });
-  draw();
-
-  /* ---------------- dialog ---------------- */
-  var dlg = document.getElementById('dlg'), sheet = document.getElementById('sheet');
-  function open(w){
-    var h = HUE[w.hue], bars='';
-    for (var i=0;i<24;i++) bars += '<i style="height:'+(20+(i*17)%75)+'%"></i>';
-    var visual = w.video
-      ? '<div class="vis"><div class="player"><video controls muted loop playsinline preload="metadata" poster="'+w.poster+'" src="'+w.video+'"'+(reduce?'':' autoplay')+'></video></div></div>'
-      : null;
-    sheet.innerHTML = (visual ||
-      '<div class="vis"><div class="phone">'+
-        '<div class="layerB" style="background:radial-gradient(70% 55% at 50% 30%,'+h[0]+'3d,'+h[1]+' 58%,#070B16)">'+
-          '<div class="bust head" style="background:#E8B08C"></div><div class="bust torso" style="background:#111827"></div>'+
-          '<div class="scrub"><i style="background:'+h[0]+'"></i></div>'+
-          '<div class="hook"><span>'+w.hook+'</span></div>'+
-          '<div class="cap">'+w.cap.map(function(c){return '<i>'+c+'</i>'}).join('')+'</div>'+
-        '</div>'+
-        '<span class="tagline">'+w.tag+'</span></div></div>')+
-      '<div class="info">'+
-        '<p class="niche" style="font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)">'+w.niche+'</p>'+
-        '<h3>'+w.title+'</h3>'+
-        bullet('#FF4D6D','rgba(255,77,109,.12)','M18 6 6 18M6 6l12 12','The footage problem', w.problem)+
-        bullet('#00F0FF','rgba(0,240,255,.12)','M12 4v16M4 12h16','The Praxak edit', w.edit)+
-        bullet('#60A5FA','rgba(37,99,235,.18)','M4 18V8M10 18V5M16 18v-7','Retention techniques used', w.tech)+
-        '<a class="btn btn-fill" style="justify-self:start" href="#contact">Get this for my content</a>'+
-      '</div>';
-    sheet.querySelector('.btn').addEventListener('click', function(){ dlg.close() });
-    dlg.showModal();
-  }
-  function bullet(stroke, bg, path, title, body){
-    return '<div class="bullet"><span class="ic" style="background:'+bg+'">'+
-      '<svg viewBox="0 0 24 24" stroke="'+stroke+'" stroke-linecap="round" aria-hidden="true"><path d="'+path+'"/></svg></span>'+
-      '<span><strong>'+title+'</strong><p>'+body+'</p></span></div>';
-  }
-  dlg.addEventListener('close', function(){ var v = sheet.querySelector('video'); if (v) { v.pause(); v.removeAttribute('src'); v.load(); } });
-  document.getElementById('dlgClose').addEventListener('click', function(){ dlg.close() });
-  dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close() });
-
-  /* ---------------- rail panels ---------------- */
-  var track = document.getElementById('track');
-  STEPS.forEach(function(s, i){
-    var w='';
-    for (var j=0;j<34;j++) w += '<i style="height:'+(18+((j*7+i*11)%80))+'%"></i>';
-    var d = document.createElement('article');
-    d.className = 'panel';
-    d.innerHTML = '<p class="tc">'+s.tc+'</p><h3>'+s.t+'</h3><p>'+s.d+'</p><div class="wave">'+w+'</div>';
-    track.appendChild(d);
-  });
-
-  /* ---------------- motion ---------------- */
-  if (!reduce && window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('#heroHead .w', {yPercent:110, duration:.8, stagger:.1, ease:'expo.out'});
-    gsap.from('.hero .lede, .hero-actions, .stats', {y:20, duration:.6, stagger:.08, delay:.3, ease:'power2.out'});
-    gsap.from('#heroPhone', {opacity:0, y:28, duration:.7, delay:.45, ease:'power2.out'});
-
-    gsap.to('#heroScrub', {width:'100%', duration:6, repeat:-1, ease:'none'});
-    gsap.timeline({repeat:-1}).to('#heroPhone .cap .kw', {color:'#00F0FF', scale:1.14, duration:.26, stagger:.5, yoyo:true, repeat:1});
-    gsap.to('#heroEdit', {scale:1.06, duration:3, yoyo:true, repeat:-1, ease:'sine.inOut'});
-
-    gsap.to('#tick1', {xPercent:-50, duration:26, repeat:-1, ease:'none'});
-
-    gsap.utils.toArray('.shead, .bento .cell, .steps .step, .cta').forEach(function(el){
-      gsap.from(el, {opacity:0, y:22, duration:.5, ease:'power2.out',
-        scrollTrigger:{trigger:el, start:'top 88%', toggleActions:'play none none reverse'}});
-    });
-
-    document.querySelectorAll('.count').forEach(function(el){
-      var to = parseFloat(el.dataset.to), o = {v:0};
-      gsap.to(o, {v:to, duration:1.1, ease:'power2.out', delay:.5,
-        onUpdate:function(){ el.textContent = Math.round(o.v) }});
-    });
-
-    /* single pinned horizontal rail */
-    var dist = function(){ return track.scrollWidth - document.getElementById('rail').clientWidth + 40 };
-    gsap.to(track, {
-      x: function(){ return -dist() }, ease:'none',
-      scrollTrigger:{ trigger:'#anatomy', start:'top top', end:function(){ return '+=' + dist() },
-        pin:true, scrub:1, invalidateOnRefresh:true, anticipatePin:1 }
-    });
-
-    window.addEventListener('load', function(){ ScrollTrigger.refresh() });
-
-    var field = document.getElementById('field');
-    window.addEventListener('pointermove', function(e){
-      field.style.setProperty('--mx', (e.clientX / window.innerWidth * 100) + '%');
-      field.style.setProperty('--my', (e.clientY / window.innerHeight * 100) + '%');
-    }, {passive:true});
-  }
-})();
-</script>
+<script src="assets/main.js"></script>
 </body>
 </html>
