@@ -394,11 +394,13 @@ body { background: var(--bg); }
 
 /* Logo: play triangle + growth arrows, Syne wordmark */
 .logo { gap: 10px; color: var(--ink); }
-.logo .mark { flex: none; width: 30px; height: 30px; filter: drop-shadow(0 0 10px rgba(0, 240, 255, .35)); transition: transform .5s var(--ease); }
+.logo .mark { flex: none; width: 36px; height: 36px; filter: drop-shadow(0 0 10px rgba(0, 240, 255, .35)); transition: transform .5s var(--ease); }
 .logo span { font-family: var(--head); font-weight: 800; font-size: 19px; letter-spacing: .05em; }
 .logo:hover .mark { transform: rotate(-8deg) scale(1.06); }
-.logo .arrow { stroke-dasharray: 30; stroke-dashoffset: 0; animation: draw-arrow 1.2s var(--ease) .2s both; }
-@keyframes draw-arrow { from { stroke-dashoffset: 30; } }
+.logo .arrow { animation: arrow-in 1s var(--ease) .25s both; }
+.logo .arrow + .arrow { animation-delay: .4s; }
+@keyframes arrow-in { from { opacity: 0; transform: translate(-3px, 3px); } }
+.logo:hover .arrow { transform: translate(1px, -1px); transition: transform .4s var(--ease); }
 footer .logo span { font-size: 18px; }
 
 /* Menu + buttons in Syne */
