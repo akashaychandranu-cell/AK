@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -67,10 +67,10 @@
         <a class="btn ghost" href="work.html">See the work</a>
       </div>
     </div>
-    <div class="frames media-hero" aria-label="Recent cuts">
-      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w1.jpg" src="media/w1.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Reel · 9:16</span></div><div class="bar"><span></span></div></div>
-      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w2.jpg" src="media/w2.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Motion · 9:16</span></div><div class="bar"><span></span></div></div>
-      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w5.jpg" src="media/w5.mp4" aria-hidden="true" tabindex="-1"></video><div class="frame-top"><span>Split screen · 9:16</span></div><div class="bar"><span></span></div></div>
+    <div class="frames media-hero" role="group" aria-label="Recent cuts">
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w1.jpg" src="media/w1.mp4" aria-hidden="true" tabindex="-1"></video><div class="bar"><span></span></div></div>
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w2.jpg" src="media/w2.mp4" aria-hidden="true" tabindex="-1"></video><div class="bar"><span></span></div></div>
+      <div class="frame media g2 "><video muted loop playsinline autoplay preload="metadata" poster="media/w5.jpg" src="media/w5.mp4" aria-hidden="true" tabindex="-1"></video><div class="bar"><span></span></div></div>
     </div>
   </div>
 </header>
@@ -139,7 +139,7 @@
       <p>Each piece lists the footage problem, the edit decision and the retention techniques used. No view-count screenshots.</p>
     </div>
     <div class="grid-work">
-      <button class="tile" type="button" data-cat="talk" data-n="0"><div class="frame media g2 "><img class="poster" src="media/w1.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Reel · 9:16</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>High-retention talking-head reel</b><span>B2B consultant / podcaster</span></div></button><button class="tile" type="button" data-cat="before" data-n="3"><div class="frame media g2 "><img class="poster" src="media/w4.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Before / after</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>Hook makeover</b><span>Real estate agent</span></div></button><button class="tile" type="button" data-cat="motion" data-n="1"><div class="frame media g2 "><img class="poster" src="media/w2.jpg" alt="" loading="lazy" width="720" height="540"><div class="frame-top"><span>Motion · 9:16</span></div><div class="bar"><span></span></div></div><div class="tile-meta"><b>Visual framework animation</b><span>Business coach</span></div></button>
+      <button class="tile" type="button" data-cat="talk" data-n="0" aria-haspopup="dialog"><span class="frame media g2 "><img class="poster" src="media/w1.jpg" alt="" loading="lazy" width="720" height="540"><span class="bar"><span></span></span></span><span class="tile-meta"><b>High-retention talking-head reel</b><span>B2B consultant / podcaster</span></span></button><button class="tile" type="button" data-cat="before" data-n="3" aria-haspopup="dialog"><span class="frame media g2 "><img class="poster" src="media/w4.jpg" alt="" loading="lazy" width="720" height="540"><span class="bar"><span></span></span></span><span class="tile-meta"><b>Hook makeover</b><span>Real estate agent</span></span></button><button class="tile" type="button" data-cat="motion" data-n="1" aria-haspopup="dialog"><span class="frame media g2 "><img class="poster" src="media/w2.jpg" alt="" loading="lazy" width="720" height="540"><span class="bar"><span></span></span></span><span class="tile-meta"><b>Visual framework animation</b><span>Business coach</span></span></button>
     </div>
     <a class="textlink" href="work.html">See all six pieces →</a>
   </div>
@@ -158,7 +158,6 @@
 </div>
   </div>
 </section>
-</main>
 <section class="close">
   <div class="wrap">
     <h2>Judge us on your <span class="s">own</span> footage.</h2>
@@ -168,13 +167,14 @@
     </div>
   </div>
 </section>
+</main>
 <dialog id="dlg" aria-labelledby="dlg-title">
   <div class="dlg">
     <div class="frame media" id="dlg-frame"><video id="dlg-video" muted loop playsinline controls preload="none"></video></div>
     <div class="dlg-body">
       <button class="x" type="button" id="dlg-close">Close</button>
       <span class="pill" id="dlg-tag"></span>
-      <h2 id="dlg-title" style="font-size:2rem"></h2>
+      <h2 id="dlg-title" style="font-size:2rem">Project</h2>
       <dl>
         <dt>Client type</dt><dd id="dlg-niche"></dd>
         <dt>Problem</dt><dd id="dlg-problem"></dd>

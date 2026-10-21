@@ -9,6 +9,7 @@
   --accent: #2b44ff;
   --on-accent: #ffffff;
   --ok: #1f8a5b;
+  --accent-on-ink: #9aa8ff;
   --err: #c2372f;
   --sans: "Inter Tight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
@@ -17,13 +18,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0c0d11; --surface: #16181f; --raised: #1b1e26; --ink: #eef0f5; --muted: #9aa0ac;
-    --line: #272a34; --accent: #7084ff; --on-accent: #0c0d11; --ok: #4cc28d; --err: #f07a72;
+    --line: #272a34; --accent: #7084ff; --on-accent: #0c0d11; --ok: #4cc28d; --err: #f07a72; --accent-on-ink: #2b44ff;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0c0d11; --surface: #16181f; --raised: #1b1e26; --ink: #eef0f5; --muted: #9aa0ac;
-  --line: #272a34; --accent: #7084ff; --on-accent: #0c0d11; --ok: #4cc28d; --err: #f07a72;
+  --line: #272a34; --accent: #7084ff; --on-accent: #0c0d11; --ok: #4cc28d; --err: #f07a72; --accent-on-ink: #2b44ff;
   color-scheme: dark;
 }
 
@@ -383,3 +384,10 @@ footer a:hover { color: var(--ink); }
 @media (max-width: 600px) { .grid-work { grid-template-columns: 1fr; } .dlg .frame.media { max-width: none; } }
 
 .frame.media .frame-top { display: none; }
+
+.tile .frame, .tile .tile-meta, .tile .bar { display: flex; }
+.tile .frame { display: flex; }
+.tile .tile-meta { display: grid; }
+.tile .bar { display: block; }
+
+.close h2 .s { color: var(--accent-on-ink); }
