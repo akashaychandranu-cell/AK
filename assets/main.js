@@ -138,3 +138,8 @@
     });
   }
 })();
+
+/* Offline support: cache the site on the device after the first visit (see sw.js). */
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+}
